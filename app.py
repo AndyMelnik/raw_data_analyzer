@@ -80,7 +80,7 @@ def format_attributes(attributes_response):
 def main():
     st.title("Tracker RAW Data Analyzer")
 
-    hash_key = st.query_params["hash"]
+    hash_key = st.query_params["session_key"]
 
     if not hash_key:
         st.error("Hash key is missing in the URL.")
