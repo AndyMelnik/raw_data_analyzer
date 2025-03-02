@@ -9,18 +9,7 @@ st.set_page_config(layout="wide")
 
 hide_streamlit_style = """
                 <style>
-                div[data-testid="stToolbar"] {
-                visibility: hidden;
-                height: 0%;
-                }
-                div[data-testid="stDecoration"] {
-                visibility: hidden;
-                height: 0%;
-                }
-                div[data-testid="stStatusWidget"] {
-                visibility: hidden;
-                height: 0%;
-                }
+                
                 #MainMenu {
                 visibility: hidden;
                 height: 0%;
