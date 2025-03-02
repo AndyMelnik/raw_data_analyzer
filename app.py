@@ -13,7 +13,20 @@ hide_st_style = """
     footer {visibility: hidden;}
     header {visibility: hidden;}
     </style>
-    """                                                
+    """       
+
+html_string='''
+<script>
+// To break out of iframe and access the parent window
+const streamlitDoc = window.parent.document;
+
+// Make the replacement
+document.addEventListener("DOMContentLoaded", function(event){
+        streamlitDoc.getElementsByTagName("footer")[0].innerHTML = "Provided by <a href='https://yourwebsite.com' target='_blank' class='css-z3au9t egzxvld2'>Your Link Display Text Here</a>";
+    });
+</script>
+'''
+components.html(html_string)
 
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
