@@ -7,6 +7,15 @@ from io import StringIO
 
 st.set_page_config(layout="wide")
 
+hide_st_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+    """                                                
+
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 def get_tracker_list(hash_key):
     url = 'https://api.eu.navixy.com/v2/tracker/list'
