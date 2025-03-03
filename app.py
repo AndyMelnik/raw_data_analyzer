@@ -102,7 +102,7 @@ def main():
     hash_key = st.query_params["session_key"]
 
     if not hash_key:
-        st.error("Hash key is missing in the URL.")
+        st.write("Hash key is missing in the URL.")
         return
 
     tracker_list_response = get_tracker_list(hash_key)
